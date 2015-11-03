@@ -4,7 +4,7 @@ require 'spec_helper'
 describe Bibliography do
     
     before :each do
-        @book = Bibliography.new("Dave Thomas","Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf","1937785491")
+        @book = Bibliography.new("Dave Thomas","Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf","1937785491","4")
     end
         
     describe "Book exists" do
@@ -40,7 +40,7 @@ describe Bibliography do
     
     describe "Book exists" do
         it "Edition number is correct" do
-            @book.edition.should eq("Edition")
+            @book.edition.should eq("4")
         end
     end
 end
