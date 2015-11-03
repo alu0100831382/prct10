@@ -4,19 +4,19 @@ require 'spec_helper'
 describe Bibliography do
     
     before :each do
-        @book = Bibliography.new("Author")
+        @book = Bibliography.new("Dave Thomas","Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide")
     end
         
     describe "Book exists" do
         it "Author is correct" do
-            @book.author.should eq("Author")
+            @book.author.should eq("Dave Thomas")
             
         end
     end
     
     describe "Book exists" do
         it "Tittle is correct" do
-            @book.tittle.should eq("Tittle")
+            @book.title.should eq("Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide")
         end
     end
 end
