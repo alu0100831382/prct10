@@ -37,4 +37,10 @@ describe Bibliography do
             @book.isbn10.should eq("1937785491")
         end
     end
+    
+    describe "Book exists" do
+        it "Edition number is correct" do
+            @book.edition.should eq("Edition")
+        end
+    end
 end
