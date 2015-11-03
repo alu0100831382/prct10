@@ -31,4 +31,10 @@ describe Bibliography do
             @book.editorial.should eq("Pragmatic Bookshelf")
         end
     end
+    
+    describe "Book exists" do
+        it "Isbn is correct" do
+            @book.isbn.should eq("Isbn")
+        end
+    end
 end
