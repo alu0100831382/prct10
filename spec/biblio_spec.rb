@@ -43,4 +43,10 @@ describe Bibliography do
             @book.edition.should eq("4")
         end
     end
+    
+    describe "Book exists" do
+        it "Series number is correct" do
+            @book.series.should eq("Series")
+        end
+    end
 end
