@@ -15,8 +15,14 @@ describe Bibliography do
     end
     
     describe "Book exists" do
-        it "Tittle is correct" do
+        it "Title is correct" do
             @book.title.should eq("Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide")
+        end
+    end
+    
+    describe "Book exists" do
+        it "Date is correct" do
+            @book.date.should eq("Date")
         end
     end
 end
