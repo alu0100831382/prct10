@@ -25,4 +25,10 @@ describe Bibliography do
             @book.date.should eq("July 7 2013")
         end
     end
+    
+    describe "Book exists" do
+        it "Editorial is correct" do
+            @book.editorial.should eq("Editorial")
+        end
+    end
 end
