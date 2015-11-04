@@ -4,12 +4,12 @@ require 'spec_helper'
 describe Bibliography do
     
     before :each do
-        @book = Bibliography.new("Dave Thomas","Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf","1937785491","4"," ")
+        @book = Bibliography.new(["Dave Thomas","Andy Hunt","Chad Fowler"],"Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf",["1937785491","978-1937785499"],"4"," ")
     end
         
     describe "Book exists" do
         it "Author is incorrect" do
-            @book.author.should eq("Dave Thomas")
+            @book.author.should eq(["Dave Thomas","Andy Hunt","Chad Fowler"])
             
         end
     end
@@ -34,7 +34,7 @@ describe Bibliography do
     
     describe "Book exists" do
         it "Isbn is incorrect" do
-            @book.isbn10.should eq("1937785491")
+            @book.isbn10.should eq(["1937785491","978-1937785499"])
         end
     end
     
