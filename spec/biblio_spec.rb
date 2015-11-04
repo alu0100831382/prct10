@@ -49,4 +49,5 @@ describe Bibliography do
             @book.series.should eq(" ")
         end
     end
+    
 end
