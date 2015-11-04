@@ -14,6 +14,12 @@ class Bibliography
         @series = series
     end
     
+    def to_s 
+        "#{@author.join(", ")}\n #{@title}\n #{@editorial}; #{@edition} #{@date}\n #{@isbn10.join(", ")}\n"
     
+
     
+
+    end
+
 end
