@@ -54,9 +54,7 @@ describe Bibliography do
       describe "Formatted Reference" do
         it "Incorrect" do
         @book.to_s.should eq("Dave Thomas, Andy Hunt, Chad Fowler\n Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide\n Pragmatic Bookshelf; 4 July 7 2013\n 1937785491, 978-1937785499\n" )
-        
-        
-        
+
         end
     end
 

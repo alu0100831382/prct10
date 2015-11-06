@@ -15,11 +15,27 @@ class Bibliography
     end
     
     def to_s 
+        
+        if @author.is_a? Array and @isbn10.is_a? Array
         "#{@author.join(", ")}\n #{@title}\n #{@editorial}; #{@edition} #{@date}\n #{@isbn10.join(", ")}\n"
-    
-
-    
-
+        
+        
+        elsif @isbn10.is_a? Array
+        
+        "#{@author}\n #{@title}\n #{@editorial}; #{@edition} #{@date}\n #{@isbn10.join(", ")}\n"
+        
+        
+        elsif @author.is_a? Array
+        
+        "#{@author.join(", ")}\n #{@title}\n #{@editorial}; #{@edition} #{@date}\n #{@isbn10}\n"
+        
+        else
+            "#{@author}\n #{@title}\n #{@editorial}; #{@edition} #{@date}\n #{@isbn10}\n"
+            
+        end
+        
     end
+
+    
 
 end
