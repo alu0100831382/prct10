@@ -33,7 +33,7 @@ class Bibliography
             "#{@author}\n #{@title}\n #{@editorial}; #{@edition} #{@date}\n #{@isbn10}\n"
             
         end
-        
+         
     end
 
     
