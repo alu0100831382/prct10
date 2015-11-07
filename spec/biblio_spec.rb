@@ -18,50 +18,50 @@ describe  Bibliography do
     end
 
     
-        it "Author is incorrect" do
+        it "Author is correct" do
            expect(@book.author).to eq(["Dave Thomas","Andy Hunt","Chad Fowler"])
             
         end
    
     
     
-        it "Title is incorrect" do
+        it "Title is correct" do
             expect(@book.title).to eq("Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide")
         end
     
     
     
-        it "Date is incorrect" do
+        it "Date is correct" do
             expect(@book.date).to eq("July 7 2013")
         end
     
     
  
-        it "Editorial is incorrect" do
+        it "Editorial is correct" do
             expect(@book.editorial).to eq("Pragmatic Bookshelf")
         end
     
     
-        it "Isbn is incorrect" do
+        it "Isbn is correct" do
             expect(@book.isbn10).to eq(["1937785491","978-1937785499"])
         end
   
     
     
-        it "Edition number is incorrect" do
+        it "Edition number is correct" do
             expect(@book.edition).to eq("4")
         end
     
     
    
-        it "Series number is incorrect" do
+        it "Series number is correct" do
             expect(@book.series).to eq(" ")
         end
     
 
 
       
-        it "Incorrect" do
+        it "correct" do
         expect(@book.to_s).to eq("Dave Thomas, Andy Hunt, Chad Fowler\n Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide\n Pragmatic Bookshelf; 4 July 7 2013\n 1937785491, 978-1937785499\n" )
 
         end
