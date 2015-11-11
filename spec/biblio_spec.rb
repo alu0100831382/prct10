@@ -23,7 +23,25 @@ describe Bibliography do
         expect(nodoa.value).to eq(l1)
         expect(nodoa.next).to eq(nil)   
     end
+end
+
+    describe List do
+    
+    node_a = Node.new(l1,nil)
+    node_b = Node.new(l2,nil)
+    node_c = Node.new(l3,nil)
+    node_d = Node.new(l4,nil)
+    node_e = Node.new(l5,nil)
+    libros = [node_c, node_d, node_e]
+    list_a = List.new(node_a)
+    list_b = List.new(nil)
+    
+    it "Existe una lista con su cabeza" do
+        expect(lista.inicio).to eq(nodoa)
     end
+end
+    
+    
     
 =begin before :each do
         @book = Bibliography.new(["Dave Thomas","Andy Hunt","Chad Fowler"],"Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf",["1937785491","978-1937785499"],"4"," ")
