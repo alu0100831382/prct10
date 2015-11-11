@@ -2,8 +2,6 @@ class Bibliography
     
     attr_accessor :author,:title, :date, :editorial, :isbn10, :edition, :series
     
-    
-     
     def initialize (autor,title,date,editorial,isbn10,edition,series)
         @author = autor 
         @title = title
@@ -35,7 +33,5 @@ class Bibliography
         end
          
     end
-
-    
 
 end
