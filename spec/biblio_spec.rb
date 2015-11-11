@@ -37,7 +37,7 @@ end
     list_b = List.new(nil)
     
     it "Existe una lista con su cabeza" do
-        expect(lista.inicio).to eq(nodoa)
+        expect(list_a.inicio).to eq(node_a)
     end
 end
     
