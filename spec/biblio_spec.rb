@@ -13,9 +13,17 @@ describe Bibliography do
    l2 = Biblio.new("Scott Chacon","Pro Git 2009th Edition","Apress","2009 edition","(August 27, 2009)",["ISBN-13: 978-1430218333. ISBN-10: 1430218339"])
    l3 = Biblio.new(["David Flanagan, Yukihiro Matsumoto"],"The Ruby Programming Language","O’Reilly Media","1 edition","(February4, 2008)",["ISBN-10: 0596516177. ISBN-13: 978-0596516178"])
    l4 = Biblio.new(["David Chelimsky, Dave Astels, Bryan Helmkamp, Dan North, Zach Dennis, Aslak Hellesoy"],"The RSpecBook: Behaviour Driven Development with RSpec","Pragmatic Bookshelf","1 edition","(December 25, 2010)",["ISBN-10: 1934356379. ISBN-13: 978-1934356371"])
-   l5 = Biblio.new("Richard E. Silverman","Las dos Torres","ESDLA","Minotauro","1 edition","(August 2, 2013)(August 2, 2013)",["ISBN-10: 1449325866. ISBN-13: 978-1449325862"])
+   l5 = Biblio.new("Richard E. Silverman","Git Pocket Guide","O’Reilly Media","1 edition","(August 2, 2013)(August 2, 2013)",["ISBN-10: 1449325866. ISBN-13: 978-1449325862"])
    
-   describe Node do
+    describe Node do
+       
+    nodoa = Node.new(l1, nil)
+    
+    it "Existe un Nodo de la lista con sus datos y su siguiente" do
+        expect(nodoa.value).to eq(l1)
+        expect(nodoa.next).to eq(nil)   
+    end
+    end
     
 =begin before :each do
         @book = Bibliography.new(["Dave Thomas","Andy Hunt","Chad Fowler"],"Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf",["1937785491","978-1937785499"],"4"," ")
@@ -54,6 +62,5 @@ describe Bibliography do
 
 end
 =end
-end
 end
 end
