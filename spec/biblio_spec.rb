@@ -45,6 +45,10 @@ end
         expect(list_a.inicio).to eq(node_b)
     end
     
+    it "Se puede extraer primer elemento de la lista" do
+        expect(list_a.extract_list()).to eq(node_b)
+    end
+    
 end
     
     
