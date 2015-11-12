@@ -34,4 +34,12 @@ class List
         end
     end
     
+    def empty()
+        if(@inicio == nil)
+            return true
+        else
+            return false
+        end
+    end
+    
 end
