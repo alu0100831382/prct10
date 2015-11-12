@@ -54,6 +54,14 @@ end
         list_a.insert_mult_list(libros)
         expect(list_a.inicio).to eq(libros[2])
     end
+     
+    it "La lista no esta vacia" do
+        expect(list_a.empty()).to eq(false)
+    end
+    
+    it "La lista esta vacia" do
+        expect(list_b.empty()).to eq(true)
+    end
     
 end
     
