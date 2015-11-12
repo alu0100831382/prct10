@@ -8,4 +8,14 @@ class List
         @inicio= node
     end
     
+    def insert_list(nodo)
+        if(@inicio == nil)
+            @inicio= nodo
+        else
+            aux = @inicio.next
+            @inicio= nodo
+            @inicio.next = aux
+        end
+    end
+    
 end

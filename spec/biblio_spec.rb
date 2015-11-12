@@ -41,8 +41,8 @@ end
     end
     
     it "Se puede insertar en la lista" do
-        lista.insert_single(nodob)
-        expect(lista.inicio).to eq(nodob)
+        list_a.insert_list(node_b)
+        expect(list_a.inicio).to eq(node_b)
     end
     
 end
