@@ -10,11 +10,21 @@ class List
     
     def insert_list(nodo)
         if(@inicio == nil)
-            @inicio= nodo
+            @inicio = nodo
         else
             aux = @inicio.next
-            @inicio= nodo
+            @inicio = nodo
             @inicio.next = aux
+        end
+    end
+    
+    def extract_list()
+        if (@inicio == nil)
+            return nil
+        else
+            aux = @inicio
+            @inicio = @inicio.next
+            return aux
         end
     end
     
