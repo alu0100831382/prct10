@@ -39,6 +39,12 @@ end
     it "Existe una lista con su cabeza" do
         expect(list_a.inicio).to eq(node_a)
     end
+    
+    it "Se puede insertar en la lista" do
+        lista.insert_single(nodob)
+        expect(lista.inicio).to eq(nodob)
+    end
+    
 end
     
     
