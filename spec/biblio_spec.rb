@@ -32,6 +32,7 @@ end
     node_c = Node.new(l3,nil)
     node_d = Node.new(l4,nil)
     node_e = Node.new(l5,nil)
+    
     libros = [node_c, node_d, node_e]
     list_a = List.new(node_a)
     list_b = List.new(nil)
@@ -47,6 +48,11 @@ end
     
     it "Se puede extraer primer elemento de la lista" do
         expect(list_a.extract_list()).to eq(node_b)
+    end
+    
+    it "Se puede insertar varios elementos a la lista" do
+        list_a.insert_mult_list(libros)
+        expect(list_a.inicio).to eq(libros[2])
     end
     
 end
