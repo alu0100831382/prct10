@@ -19,13 +19,13 @@ describe Bibliography do
        
     nodoa = Node.new(l1, nil)
     
-    it "Existe un Nodo de la lista con sus datos y su siguiente" do
+    it "Existe un nodo de la lista con sus datos y su siguiente" do
         expect(nodoa.value).to eq(l1)
         expect(nodoa.next).to eq(nil)   
     end
 end
 
-    describe List do
+describe List do
     
     node_a = Node.new(l1,nil)
     node_b = Node.new(l2,nil)
@@ -37,6 +37,7 @@ end
     list_a = List.new(node_a)
     list_b = List.new(nil)
     
+    #Comprobacion de las distintas pruebas
     it "Existe una lista con su cabeza" do
         expect(list_a.inicio).to eq(node_a)
     end
@@ -65,8 +66,7 @@ end
     
 end
     
-    
-    
+
 =begin before :each do
         @book = Bibliography.new(["Dave Thomas","Andy Hunt","Chad Fowler"],"Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide","July 7 2013","Pragmatic Bookshelf",["1937785491","978-1937785499"],"4"," ")
     end
