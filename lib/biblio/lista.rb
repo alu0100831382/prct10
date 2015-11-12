@@ -28,4 +28,10 @@ class List
         end
     end
     
+    def insert_mult_list(nodos)
+        nodos.each do |element|
+            insert_list(element)
+        end
+    end
+    
 end
