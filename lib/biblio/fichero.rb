@@ -23,3 +23,16 @@ class Libro < Bibliography
         @editorial = editorial
     end
 end
+
+class Articulo < Bibliography
+    
+    attr_accessor :tipo, :issn
+    
+    def initialize(autor,title,date,type,issn)
+        @author = autor 
+        @title = title
+        @date = date
+        @type = type
+        @issn = issn
+    end
+end
