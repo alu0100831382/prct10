@@ -74,18 +74,18 @@ describe List do
     end
 end
 
-describe Biblio do
+describe Bibliography do
     
     context "Libros" do
         
-        l6 = Libro.new("Richard E. Silverman","Git Pocket Guide","(August 2, 2013)","1 edition","O’Reilly Media",["ISBN-10: 1449325866. ISBN-13: 978-1449325862"])
+        l6 = Libro.new("Richard E. Silverman","Git Pocket Guide","(August 2, 2013)","1 edition",["ISBN-10: 1449325866. ISBN-13: 978-1449325862"],"","O’Reilly Media")
         
         it "Comprobamos que el libro l1 pertenece a la clase Libro" do
             expect(l6.instance_of?Libro).to eq(true)
         end
         
         it "Comprobamos que el libro es heredado de Biblio" do
-            expect(l6).to be_kind_of(Biblio)
+            expect(l6).to be_kind_of(Bibliography)
         end
     end
 end
