@@ -2,8 +2,8 @@ class Bibliography
     
     attr_accessor :author,:title, :date
     
-    def initialize(autor,title,date)
-        @author = autor 
+    def initialize(author,title,date)
+        @author = author 
         @title = title
         @date = date
     end
@@ -13,8 +13,8 @@ class Libro < Bibliography
     
     attr_accessor :edition, :isbn, :serie, :editorial
      
-    def initialize(autor,title,date,edition,isbn,serie,editorial)
-        @author = autor 
+    def initialize(author,title,date,edition,isbn,serie,editorial)
+        @author = author 
         @title = title
         @date = date
         @edition = edition
@@ -28,8 +28,8 @@ class Articulo < Bibliography
     
     attr_accessor :tipo, :issn
     
-    def initialize(autor,title,date,type,issn)
-        @author = autor 
+    def initialize(author,title,date,type,issn)
+        @author = author 
         @title = title
         @date = date
         @type = type

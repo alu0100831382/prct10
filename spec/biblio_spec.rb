@@ -80,11 +80,11 @@ describe Bibliography do
         
         l6 = Libro.new("Richard E. Silverman","Git Pocket Guide","(August 2, 2013)","1 edition",["ISBN-10: 1449325866. ISBN-13: 978-1449325862"],"","O’Reilly Media")
         
-        it "Comprobamos que el libro l1 pertenece a la clase Libro" do
+        it "Comprobamos que el libro (l6) pertenece a la clase Libro" do
             expect(l6.instance_of?Libro).to eq(true)
         end
         
-        it "Comprobamos que el libro es heredado de Bibliography" do
+        it "Comprobamos que el libro (l6) es heredado de Bibliography" do
             expect(l6).to be_kind_of(Bibliography)
         end
     end
@@ -93,11 +93,11 @@ describe Bibliography do
         
         a1 = Articulo.new("El mayor fabricante de drones impide que sobrevuelen estadios y embajadas","Ramon Peco","Noviembre de 2015","El Pais","16489357")
         
-        it "Comprobamos que el articulo a1 pertenece a la clase Articulo" do
+        it "Comprobamos que el articulo (a1) pertenece a la clase Articulo" do
             expect(a1.instance_of?Articulo).to eq(true)
         end
         
-        it "Comprobamos que el articulo es heredado de Bibliography" do
+        it "Comprobamos que el articulo (a1) es heredado de Bibliography" do
             expect(a1).to be_kind_of(Bibliography)
         end
     end
