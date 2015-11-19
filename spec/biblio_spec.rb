@@ -84,8 +84,21 @@ describe Bibliography do
             expect(l6.instance_of?Libro).to eq(true)
         end
         
-        it "Comprobamos que el libro es heredado de Biblio" do
+        it "Comprobamos que el libro es heredado de Bibliography" do
             expect(l6).to be_kind_of(Bibliography)
+        end
+    end
+    
+    context "Articulo" do
+        
+        a1 = Articulo.new("El mayor fabricante de drones impide que sobrevuelen estadios y embajadas","Ramon Peco","Noviembre de 2015","El Pais","16489357")
+        
+        it "Comprobamos que el articulo a1 pertenece a la clase Articulo" do
+            expect(a1.instance_of?Articulo).to eq(true)
+        end
+        
+        it "Comprobamos que el articulo es heredado de Bibliography" do
+            expect(a1).to be_kind_of(Bibliography)
         end
     end
 end
