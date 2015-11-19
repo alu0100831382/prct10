@@ -26,9 +26,6 @@ describe Bibliography do
     end
 end
 
-describe List do
-    
-
-end    
+  
 end
 end
