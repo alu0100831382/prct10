@@ -67,6 +67,11 @@ describe List do
     it"La lista no esta vacia" do
         expect(list_a.empty()).to eq(true)
     end
+    
+    it "Se puede insertar varios libros" do
+        list_a.insert_multiple(libros)
+        expect(list_a.inicio).to eq(libros[2])
+    end
       
 end
 end
