@@ -35,8 +35,8 @@ class List
         if (@final == nil)
             return nil
         else
-            aux= @final
-            @final= final.prev
+            aux = @final
+            @final = final.prev
             return aux
         end
     end
@@ -51,5 +51,14 @@ class List
             @final.prev = aux
             @final.next = nil
         end
+    end
+    
+    def empty()
+        if(@inicio == nil)
+            return true
+        else
+            return false
+        end
+            
     end
 end

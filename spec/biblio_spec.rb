@@ -65,7 +65,7 @@ describe List do
     end
     
     it"La lista no esta vacia" do
-        expect(list_a.empty()).to eq(false)
+        expect(list_a.empty()).to eq(true)
     end
       
 end
