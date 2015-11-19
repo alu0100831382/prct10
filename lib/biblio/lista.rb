@@ -59,6 +59,11 @@ class List
         else
             return false
         end
-            
+    end
+    
+    def insert_multiple(nodos)
+        nodos.each do |element|
+        insert_list(element)
+        end
     end
 end
