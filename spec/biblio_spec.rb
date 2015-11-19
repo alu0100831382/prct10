@@ -72,7 +72,22 @@ describe List do
         list_a.insert_multiple(libros)
         expect(list_a.inicio).to eq(libros[2])
     end
-      
+end
+
+describe Biblio do
+    
+    context "Libros" do
+        
+        l6 = Libro.new("Richard E. Silverman","Git Pocket Guide","(August 2, 2013)","1 edition","O’Reilly Media",["ISBN-10: 1449325866. ISBN-13: 978-1449325862"])
+        
+        it "Comprobamos que el libro l1 pertenece a la clase Libro" do
+            expect(l6.instance_of?Libro).to eq(true)
+        end
+        
+        it "Comprobamos que el libro es heredado de Biblio" do
+            expect(l6).to be_kind_of(Biblio)
+        end
+    end
 end
 end
 end
