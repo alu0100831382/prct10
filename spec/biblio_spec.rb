@@ -59,7 +59,15 @@ describe List do
     it "Se puede extraer al final de la lista" do
         expect(list_a.extract_end()).to eq(node_b)
     end
-
+    
+    it"La lista esta vacia" do
+        expect(list_b.empty()).to eq(true)
+    end
+    
+    it"La lista no esta vacia" do
+        expect(list_a.empty()).to eq(false)
+    end
+      
 end
 end
 end
