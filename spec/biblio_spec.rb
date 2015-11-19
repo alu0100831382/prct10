@@ -26,6 +26,31 @@ describe Bibliography do
     end
 end
 
-  
+describe List do
+    
+    node_a = Node.new(1,nil,nil)
+    node_b = Node.new(2,nil,nil)
+    node_c = Node.new(3,nil,nil)
+    node_d = Node.new(4,nil,nil)
+    node_e = Node.new(5,nil,nil)
+    libros = [node_c, node_d, node_e]
+    list_a = List.new(node_a)
+    list_b = List.new(nil)
+    
+    it "Existe una lista con su inicio y su final" do
+        expect(list_a.inicio).to eq(node_a)
+        expect(list_a.final).to eq(node_a)
+    end
+    
+    it "Se puede insertar al inicio de la lista" do
+        list_a.insert_inicio(node_b)
+        expect(list_a.inicio).to eq(node_b)
+    end
+    
+    it "Se puede extraer al inicio de la lista" do
+        expect(list_a.extraer_inicio()).to eq(node_b)
+    end
+
+end
 end
 end
