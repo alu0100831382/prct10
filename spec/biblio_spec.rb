@@ -43,12 +43,12 @@ describe List do
     end
     
     it "Se puede insertar al inicio de la lista" do
-        list_a.insert_inicio(node_b)
+        list_a.insert_list(node_b)
         expect(list_a.inicio).to eq(node_b)
     end
     
     it "Se puede extraer al inicio de la lista" do
-        expect(list_a.extraer_inicio()).to eq(node_b)
+        expect(list_a.extract_list()).to eq(node_b)
     end
 
 end
