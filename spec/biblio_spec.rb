@@ -50,6 +50,15 @@ describe List do
     it "Se puede extraer al inicio de la lista" do
         expect(list_a.extract_list()).to eq(node_b)
     end
+    
+    it "Se puede insertar al final de la lista" do
+        list_a.insert_end(node_b)
+        expect(list_a.final).to eq(node_b)
+    end
+      
+    it "Se puede extraer al final de la lista" do
+        expect(list_a.extract_end()).to eq(node_b)
+    end
 
 end
 end
