@@ -30,4 +30,26 @@ class List
             @inicio.prev = aux
         end
     end
+    
+    def extract_end()
+        if (@final == nil)
+            return nil
+        else
+            aux= @final
+            @final= final.prev
+            return aux
+        end
+    end
+        
+    def insert_end(nodo)
+        if(@final == nil)
+            @final = nodo
+            @inicio = nodo
+        else
+            aux = @final.next
+            @final = nodo
+            @final.prev = aux
+            @final.next = nil
+        end
+    end
 end
