@@ -8,7 +8,7 @@ describe Biblio do
     end
   
 describe List do
-    context "Las expectativas de enumerable"
+    context "Las expectativas de enumerable" do
     before :each do
         @l1 = Bibliography.new(["Dave Thomas","Andy Hunt", "Chad Fowler"],"Programming Ruby 1.9 & 2.0. (The Facets of Ruby)","(July 7, 2013)")
         @l2 = Bibliography.new("Scott Chacon","Pro Git 2009th Edition","(August 27, 2009)")
@@ -44,7 +44,7 @@ describe List do
     end
          
     it "Comprobrando el minimo de los libros" do
-        expect(@list_a.min).to eq(@l5)
+        expect(@list_a.min).to eq(@l2)
     end
     
     it "Comprobrando el metodo sort" do
@@ -100,6 +100,7 @@ describe Biblio do
         expect(@a1 == @l1).to eq(false)
     end
 
+end
 end
 end
 end
