@@ -36,7 +36,7 @@ describe List do
     end
     
 describe Biblio do 
-    context "Expectativas de Comparable" do
+    context "Las expectativas de Comparable" do
     before :each do
         @l1 = Bibliography.new(["Dave Thomas","Andy Hunt", "Chad Fowler"],"Programming Ruby 1.9 & 2.0. (The Facets of Ruby)","(July 7, 2013)")
         @l2 = Bibliography.new("Scott Chacon","Pro Git 2009th Edition","(August 27, 2009)")
@@ -49,7 +49,14 @@ describe Biblio do
     it "l1 >= l2" do
         expect(@l1 >= @l2).to eq(true)
     end
-
+    
+    it "l2 < l1" do
+        expect(@l2 < @l1).to eq(true)
+    end
+      
+    it "l2 <= l1" do
+        expect(@l2 <= @l1).to eq(true)
+    end
 
 end
 end
