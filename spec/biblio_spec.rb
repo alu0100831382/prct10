@@ -40,6 +40,7 @@ describe Biblio do
     before :each do
         @l1 = Bibliography.new(["Dave Thomas","Andy Hunt", "Chad Fowler"],"Programming Ruby 1.9 & 2.0. (The Facets of Ruby)","(July 7, 2013)")
         @l2 = Bibliography.new("Scott Chacon","Pro Git 2009th Edition","(August 27, 2009)")
+        @a1 = Articulo.new("El mayor fabricante de drones impide que sobrevuelen estadios y embajadas","Ramon Peco","Noviembre de 2015","El Pais","16489357")
     end
     
     it "l1 > l2" do
@@ -56,6 +57,18 @@ describe Biblio do
       
     it "l2 <= l1" do
         expect(@l2 <= @l1).to eq(true)
+    end
+    
+    it "l1 == l1" do
+        expect(@l1 == @l1).to eq(true)
+    end
+
+    it "l1 != l2" do
+        expect(@l1 == @l2).to eq(false)
+    end
+      
+    it "a1 != l1" do
+        expect(@a1 == @l1).to eq(false)
     end
 
 end
