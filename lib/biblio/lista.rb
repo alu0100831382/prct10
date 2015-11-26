@@ -19,15 +19,16 @@ class List
         end
     end
         
-    def insert_list(nodo)
+    def insert_list(x)
+        nodo = Node.new(x,nil,nil)
         if(@inicio == nil)
             @inicio = nodo
             @final = nodo
         else
-            aux = @inicio.next
+            aux = @inicio
             @inicio = nodo
             @inicio.next = aux
-            @inicio.prev = aux
+            aux.prev = @inicio
         end
     end
     
@@ -42,14 +43,15 @@ class List
     end
         
     def insert_end(nodo)
+        nodo = Node.new(x,nil,nil)
         if(@final == nil)
             @final = nodo
             @inicio = nodo
         else
-            aux = @final.next
+            aux = @final
             @final = nodo
             @final.prev = aux
-            @final.next = nil
+            aux.next = @final
         end
     end
     
@@ -64,6 +66,21 @@ class List
     def insert_multiple(nodos)
         nodos.each do |element|
         insert_list(element)
+        end
+    end
+    
+    def each
+        if (@inicio == nil and @final == nil)
+            yield nil
+        elsif (@inicio == @final)
+            yield @inicio.value
+            
+        else
+            
+            while(@inicio != nil)
+                yield @inicio.value
+                @inicio = @inicio.next
+            end                
         end
     end
 end
