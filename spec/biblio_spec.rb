@@ -12,7 +12,7 @@ describe List do
     before :each do
         @l1 = Bibliography.new(["Dave Thomas","Andy Hunt", "Chad Fowler"],"Programming Ruby 1.9 & 2.0. (The Facets of Ruby)","(July 7, 2013)")
         @l2 = Bibliography.new("Scott Chacon","Pro Git 2009th Edition","(August 27, 2009)")
-        @l3 = Bibliography.new(["David Flanagan, Yukihiro Matsumoto"],"The Ruby Programming Language","(February 4, 2008)")
+        @l3 = Bibliography.new(["David Flanagan, Yukihiro Matsumoto"],"Ruby Programming Language","(February 4, 2008)")
         @l4 = Bibliography.new(["David Chelimsky, Dave Astels, Bryan Helmkamp, Dan North, Zach Dennis, Aslak Hellesoy"],"The RSpecBook: Behaviour Driven Development with RSpec","(December 25, 2010)")
         @l5 = Bibliography.new("Richard E. Silverman","Git Pocket Guide","(August 2, 2013)")
         
@@ -39,12 +39,24 @@ describe List do
         expect(@list_a.count).to eq(4)
     end
    
-    it "Comprobrando max" do
+    it "Comprobrando el maximo de los libros" do
         expect(@list_a.max).to eq(@l4)
     end
          
-    it "Comprobrando min" do
-        expect(@list_a.min).to eq(@l2)
+    it "Comprobrando el minimo de los libros" do
+        expect(@list_a.min).to eq(@l5)
+    end
+    
+    it "Comprobrando el metodo sort" do
+        expect(@list_a.sort).to eq([@l2,@l1,@l3,@l4])
+    end
+         
+    it "Comprobrando el metodo drop" do
+        expect(@list_a.drop(1)).to eq([@l4,@l3,@l1])
+    end
+         
+    it "Comprobrando el metodo first" do
+        expect(@list_a.first(1)).to eq([@l2])
     end
     
 describe Biblio do 
