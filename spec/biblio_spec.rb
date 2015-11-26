@@ -35,6 +35,18 @@ describe List do
         expect(@list_b.any?).to eq(false)
     end
     
+    it "Comprobrando el metodo count" do 
+        expect(@list_a.count).to eq(4)
+    end
+   
+    it "Comprobrando max" do
+        expect(@list_a.max).to eq(@l4)
+    end
+         
+    it "Comprobrando min" do
+        expect(@list_a.min).to eq(@l2)
+    end
+    
 describe Biblio do 
     context "Las expectativas de Comparable" do
     before :each do
