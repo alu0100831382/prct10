@@ -59,6 +59,11 @@ describe List do
         expect(@list_a.first(1)).to eq([@l2])
     end
     
+    it "Comprobando el metodo detect y find" do
+        expect(@list_a.detect {|i| i == @l2}).to eq(@l2)
+        expect(@list_a.find {|i| i == @l1}).to eq(@l1)
+    end
+    
 describe Biblio do 
     context "Las expectativas de Comparable" do
     before :each do
