@@ -4,9 +4,9 @@ class List
     
     attr_accessor :inicio, :final 
     
-    def initialize(node)
-        @inicio = node
-        @final = node
+    def initialize()
+        @inicio = nil
+        @final = nil
     end
     
     def extract_list()

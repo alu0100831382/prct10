@@ -1,11 +1,20 @@
 class Bibliography
     
+    include Comparable
     attr_accessor :author,:title, :date
     
     def initialize(author,title,date)
         @author = author 
         @title = title
         @date = date
+    end
+    
+    def <=> (other)
+        @title <=> other.title
+    end
+     
+    def == (other)
+        @title == other.title
     end
 end
 
