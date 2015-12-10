@@ -10,11 +10,11 @@ describe Biblio do
 describe List do
     context "Las pruebas de los libros" do
     before :each do
-        @l1 = Bibliography.new("Programming Ruby 1.9 & 2.0. (The Facets of Ruby)","Dave Thomas","(July 7, 2013)","(1 Edicion)","(2)","España")
-        @l2 = Bibliography.new("Pro Git 2009th Edition","Scott Chacon","(August 27, 2009)","(1 Edicion)","(1)","Inglaterra")
-        @l3 = Bibliography.new("Ruby Programming Language","David Flanagan","(February 4, 2008)","(1 Edicion)","Francia")
-        @l4 = Bibliography.new("The RSpecBook: Behaviour Driven Development with RSpec","David Chelimsky","(December 25, 2010)","(1)","España")
-        @l5 = Bibliography.new("Git Pocket Guide","Richard E. Silverman","(August 2, 2013)","(2)","Francia")
+        @l1 = Bibliography.new("Programming Ruby 1.9 & 2.0. (The Facets of Ruby)","Thomas, D.","(July 7, 2013)","(1 Edicion)","(2)","España")
+        @l2 = Bibliography.new("Pro Git 2009th Edition","Chacon, S.","(August 27, 2009)","(1 Edicion)","(1)","Inglaterra")
+        @l3 = Bibliography.new("Ruby Programming Language","Flanagan, D.","(February 4, 2008)","(1 Edicion)","Francia")
+        @l4 = Bibliography.new("The RSpecBook: Behaviour Driven Development with RSpec","Chelimsky, D.","(December 25, 2010)","(1)","España")
+        @l5 = Bibliography.new("Git Pocket Guide","Silverman, E. R.","(August 2, 2013)","(2)","Francia")
         
         @list_a = List.new()
         @list_b = List.new()
@@ -27,11 +27,18 @@ describe List do
         @list_c.insert_list(@l3)
         @list_c.insert_list(@l1)
         
+    end
+    
         it "Autores distintos, ordenados por autores" do
             expect(@list_a.sort).to eq([@l1,@l2])
-         end
+        end
+        
+        it "Autores iguales, ordenando por fechas" do
+            expect(@list_c.sort).to eq([@l2,@l3])
+        end
+        
+        
         
     end
-end
 end
 end
