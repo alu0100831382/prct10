@@ -27,6 +27,10 @@ describe List do
         @list_c.insert_list(@l3)
         @list_c.insert_list(@l1)
         
+        it "Autores distintos, ordenados por autores" do
+            expect(@list_a.sort).to eq([@l1,@l2])
+         end
+        
     end
 end
 end

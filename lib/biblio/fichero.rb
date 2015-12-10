@@ -9,13 +9,6 @@ class Bibliography
         @date = date
     end
     
-    def <=> (other)
-        @title <=> other.title
-    end
-     
-    def == (other)
-        @title == other.title
-    end
 end
 
 class Libro < Bibliography
