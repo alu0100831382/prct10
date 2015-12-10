@@ -14,6 +14,8 @@ class Bibliography
             @author <=> other.author
         elsif(@author == other.author)
             @date <=> other.date
+        elsif(@fecha == other.fecha && @autor == other.autor)
+            @titulo <=> other.titulo
         end
     end
     

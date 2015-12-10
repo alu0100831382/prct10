@@ -13,7 +13,7 @@ describe Biblio do
         @l1 = Libro.new("Programming Ruby 1.9 & 2.0","Thomas, D.","(2013)","(1 Edicion)","(1)","Inglaterra")
         @l2 = Libro.new("Pro Git 2009th Edition","Chacon, S.","(2009)","(1 Edicion)","(1)","Inglaterra")
         @l3 = Libro.new("Ruby Programming Language","Chacon, S.","(2008)","(1 Edicion)","(1)","Inglaterra")
-        @l4 = Libro.new("The RSpecBook: Behaviour Driven Development with RSpec","Chacon, S.","(2010)","(1 Edicion)","(2)","Inglaterra")
+        @l4 = Libro.new("The RSpecBook: Behaviour Driven Development with RSpec","Chacon, S.","(2008)","(1 Edicion)","(2)","Inglaterra")
         
         @list_a = List.new()
         @list_b = List.new()
@@ -32,11 +32,13 @@ describe Biblio do
             expect(@list_a.sort).to eq([@l2,@l1])
         end
         
-        it "Autores iguales, ordenando por fechas" do
+        it "Autores iguales, ordenados por fechas" do
             expect(@list_c.sort).to eq([@l3,@l2])
         end
         
-        
+        it "Autores iguales y fechas iguales, ordenados por títulos" do
+            expect(@list_b.sort).to eq([@l3,@l4])
+        end
         
     end
 end
