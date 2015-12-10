@@ -9,6 +9,12 @@ class Bibliography
         @date = date
     end
     
+    def <=>(other)
+        if(@author != other.author)
+            @author <=> other.author
+        end
+    end
+    
 end
 
 class Libro < Bibliography
