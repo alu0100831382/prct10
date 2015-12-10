@@ -19,6 +19,9 @@ class Bibliography
         end
     end
     
+    def to_s()
+        @imprimir = " AUTOR/ES: " + "#{@author}" + " TITULO: " + "#{@title}" + " FECHA: " + "#{@date}" 
+    end
 end
 
 class Libro < Bibliography
