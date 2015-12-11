@@ -14,13 +14,13 @@ class Bibliography
             @author <=> other.author
         elsif(@author == other.author)
             @date <=> other.date
-        elsif(@fecha == other.fecha && @autor == other.autor)
-            @titulo <=> other.titulo
+        elsif(@date == other.date && @author == other.author)
+            @title <=> other.title
         end
     end
     
     def to_s()
-        @imprimir = " Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" 
+        @imprimir = "Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" 
     end
 end
 
@@ -38,12 +38,14 @@ class Libro < Bibliography
     end
     
     def to_s()
-        @imprimir = " Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" + " Edicion: " + "#{@edition}" + " Volumen: " + "#{@volume}" + " Lugar: " + "#{@place}" 
+        @imprimir = "Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" + " Edicion: " + "#{@edition}" + " Volumen: " + "#{@volume}" + " Lugar de publicacion: " + "#{@place}" 
     end
+end
 
 class Articulo < Bibliography
 
     attr_accessor :editor,:pages,:type
+    
     def initialize(title,author,date,editor,pages,type)
         @title = title
         @author = author
@@ -57,6 +59,5 @@ class Articulo < Bibliography
         @imprimir = "Autor/es: " + "#{@author}" +  " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" +  " Editor: " + "#{@editor}" +  " Paginas: " + "#{@pages}" + " Obra: " + "#{@type}"
     end
     
-end
     
 end
