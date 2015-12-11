@@ -40,20 +40,20 @@ describe Biblio do
             expect(@list_b.sort).to eq([@l3,@l4])
         end
         
-        it "Usando el formato de la Asociacion de Psicologica Americana (APA)" do
+        it "Usando el formato de la Asociacion de Psicologica Americana (APA) en libros" do
             expect(@l1.to_s).to eq("Autor/es: Thomas, D. Titulo: Programming Ruby 1.9 & 2.0 Fecha: (2013) Edicion: (1 Edicion) Volumen: (2) Lugar: Inglaterra")
             expect(@l2.to_s).to eq("Autor/es: Chacon, S. Titulo: Pro Git 2009th Edition Fecha: (2009) Edicion: (5 Edicion) Volumen: (3) Lugar: Inglaterra")
             expect(@l3.to_s).to eq("Autor/es: Chacon, S. Titulo: Ruby Programming Language Fecha: (2008) Edicion: (2 Edicion) Volumen: (1) Lugar: Inglaterra")
             expect(@l4.to_s).to eq("Autor/es: Chacon, S. Titulo: The RSpecBook: Behaviour Driven Development with RSpec Fecha: (2008) Edicion: (1 Edicion) Volumen: (2) Lugar: Inglaterra")
         end
         
-        context "las pruebas de los articulos" do
-      
-         before :each do
+        context "Las pruebas de los articulos" do
+            
+            before :each do
             @a1 = Articulo.new("La España que queremos","Castejon, P. S.","(El Pais)","(2015)","(1)","Opinion")
-            @a2 = Articulo.new("Así es como malgastas energía (y dinero) en la cocina","Femmine L. D.","(El Pais)","(2013)","(2)","Opinion")
+            @a2 = Articulo.new("Así es como malgastas energía (y dinero) en la cocina","Femmine, L. D.","(El Pais)","(2013)","(2)","Opinion")
             @a3 = Articulo.new("El Prado alcanza su cumbre digital","Castejon, P. S.","(El Pais)","(2010)","(1)","Opinion")
-            @a4 = Articulo.new("La justicia deportiva mantiene la suspensión a Platini","Castejon, P. S.","(El Pais)","(2015)","(2)","Opinion")
+            @a4 = Articulo.new("La justicia deportiva mantiene la suspensión a Platini","Castejon, P. S.","(El Pais)","(2010)","(2)","Opinion")
 
             @list_a = List.new()
             @list_b = List.new()
@@ -72,12 +72,21 @@ describe Biblio do
         end
         
         it "Autores iguales, ordenados por fechas" do
-            expect(@list_c.sort).to eq([@a1,@a3])
+            expect(@list_c.sort).to eq([@a3,@a1])
         end
          
         it "Autores iguales y fechas iguales, ordenados por título" do
-            expect(@list_b.sort).to eq([@a4,@a3])
+            expect(@list_b.sort).to eq([@a3,@a4])
+        end
+        
+        it "Usando el formato de la Asociacion de Psicologica Americana (APA) en articulos" do
+            expect(@a1.to_s).to eq("Autor/es: Castejon, P. S. Titulo: La España que queremos Fecha: (El Pais) Editor: (2015) PAGINAS: (5) Obra: Opinion")
+            expect(@a2.to_s).to eq("Autor/es: Femmine, L. D. Titulo: Así es como malgastas energía (y dinero) en la cocina Fecha: (El Pais) Editor: (2015) PAGINAS: (2) Obra: Columna")
+            expect(@a3.to_s).to eq("Autor/es: Castejon, P. S. Titulo: El Prado alcanza su cumbre digital Fecha: (El Pais) Editor: (2014) Paginas: (1) OBRA: Suceso")
+            expect(@a4.to_s).to eq("Autor/es: Castejon, P. S. Titulo: La justicia deportiva mantiene la suspensión a Platini Fecha: (El Pais) Editor: (2010) Paginas: (8) Obra: Opinion")
         end
         
     end
+end
+end
 end

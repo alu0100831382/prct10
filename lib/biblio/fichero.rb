@@ -38,10 +38,10 @@ class Libro < Bibliography
     end
     
     def to_s()
-        @imprimir = " Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}"  +  " Edicion: " + "#{@edition}" + " Volumen: " + "#{@volume}" + " Lugar: " + "#{@place}" 
+        @imprimir = " Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" + " Edicion: " + "#{@edition}" + " Volumen: " + "#{@volume}" + " Lugar: " + "#{@place}" 
     end
 
-class Articulo < Biblio
+class Articulo < Bibliography
 
     attr_accessor :editor,:pages,:type
     def initialize(title,author,date,editor,pages,type)
@@ -52,6 +52,11 @@ class Articulo < Biblio
         @pages = pages
         @type = type 
     end
+    
+    def to_s()
+        @imprimir = "Autor/es: " + "#{@author}" +  " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" +  " Editor: " + "#{@editor}" +  " Paginas: " + "#{@pages}" + " Obra: " + "#{@type}"
+    end
+    
 end
     
 end
