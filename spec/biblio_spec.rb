@@ -41,12 +41,30 @@ describe Biblio do
         end
         
         it "Usando el formato de la Asociacion de Psicologica Americana (APA)" do
-            expect(@l1.to_s).to eq("Autor/es: Thomas, D. TITULO: Programming Ruby 1.9 & 2.0 FECHA: (2013) EDICION: (1 Edicion) VOLUMEN: (2) LUGAR: Inglaterra")
-            expect(@l2.to_s).to eq("Autor/es: Chacon, S. TITULO: Pro Git 2009th Edition FECHA: (2009) EDICION: (5 Edicion) VOLUMEN: (3) LUGAR: Inglaterra")
-            expect(@l3.to_s).to eq("Autor/es: Chacon, S. TITULO: Ruby Programming Language FECHA: (2008) EDICION: (2 Edicion) VOLUMEN: (1) LUGAR: Inglaterra")
-            expect(@l4.to_s).to eq("Autor/es: Chacon, S. TITULO: The RSpecBook: Behaviour Driven Development with RSpec FECHA: (2008) EDICION: (1 Edicion) VOLUMEN: (2) LUGAR: Inglaterra")
+            expect(@l1.to_s).to eq("Autor/es: Thomas, D. Titulo: Programming Ruby 1.9 & 2.0 Fecha: (2013) Edicion: (1 Edicion) Volumen: (2) Lugar: Inglaterra")
+            expect(@l2.to_s).to eq("Autor/es: Chacon, S. Titulo: Pro Git 2009th Edition Fecha: (2009) Edicion: (5 Edicion) Volumen: (3) Lugar: Inglaterra")
+            expect(@l3.to_s).to eq("Autor/es: Chacon, S. Titulo: Ruby Programming Language Fecha: (2008) Edicion: (2 Edicion) Volumen: (1) Lugar: Inglaterra")
+            expect(@l4.to_s).to eq("Autor/es: Chacon, S. Titulo: The RSpecBook: Behaviour Driven Development with RSpec Fecha: (2008) Edicion: (1 Edicion) Volumen: (2) Lugar: Inglaterra")
         end
         
+        context "las pruebas de los articulos" do
+      
+         before :each do
+            @a1 = Articulo.new("La España que queremos","Castejon, P. S.","(El Pais)","(2015)","(1)","Opinion")
+            @a2 = Articulo.new("Así es como malgastas energía (y dinero) en la cocina","Femmine L. D.","(El Pais)","(2013)","(2)","Opinion")
+            @a3 = Articulo.new("El Prado alcanza su cumbre digital","Castejon, P. S.","(El Pais)","(2010)","(1)","Opinion")
+            @a4 = Articulo.new("La justicia deportiva mantiene la suspensión a Platini","Castejon, P. S.","(El Pais)","(2015)","(2)","Opinion")
+
+            @list_a = List.new()
+            @list_b = List.new()
+            @list_c = List.new()
+            
+            @list_a.insert_list(@a1)
+            @list_a.insert_list(@a2)
+            @list_b.insert_list(@a1)
+            @list_b.insert_list(@a4)
+            @list_c.insert_list(@a1)
+            @list_c.insert_list(@a3)
+         end
+        
     end
-end
-end
