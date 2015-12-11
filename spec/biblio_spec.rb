@@ -50,10 +50,10 @@ describe Biblio do
         context "Las pruebas de los articulos" do
             
             before :each do
-            @a1 = Articulo.new("La España que queremos","Castejon, P. S.","(El Pais)","(2015)","(1)","Opinion")
-            @a2 = Articulo.new("Así es como malgastas energía (y dinero) en la cocina","Femmine, L. D.","(El Pais)","(2013)","(2)","Columna")
+            @a1 = Articulo.new("La Espanya que queremos","Castejon, P. S.","(El Pais)","(2015)","(1)","Opinion")
+            @a2 = Articulo.new("Asi es como malgastas energia (y dinero) en la cocina","Femmine, L. D.","(El Pais)","(2013)","(2)","Columna")
             @a3 = Articulo.new("El Prado alcanza su cumbre digital","Castejon, P. S.","(El Pais)","(2010)","(1)","Opinion")
-            @a4 = Articulo.new("La justicia deportiva mantiene la suspensión a Platini","Castejon, P. S.","(El Pais)","(2010)","(2)","Articulo")
+            @a4 = Articulo.new("La justicia deportiva mantiene la suspension a Platini","Castejon, P. S.","(El Pais)","(2010)","(2)","Articulo")
 
             @list_a = List.new()
             @list_b = List.new()
@@ -80,10 +80,10 @@ describe Biblio do
         end
         
         it "Usando el formato de la Asociacion de Psicologica Americana (APA) en articulos" do
-            expect(@a1.to_s).to eq("Autor/es: Castejon, P. S. Titulo: La España que queremos Fecha: (El Pais) Editor: (2015) Paginas: (1) Obra: Opinion")
-            expect(@a2.to_s).to eq("Autor/es: Femmine, L. D. Titulo: Así es como malgastas energía (y dinero) en la cocina Fecha: (El Pais) Editor: (2013) Paginas: (2) Obra: Columna")
+            expect(@a1.to_s).to eq("Autor/es: Castejon, P. S. Titulo: La Espanya que queremos Fecha: (El Pais) Editor: (2015) Paginas: (1) Obra: Opinion")
+            expect(@a2.to_s).to eq("Autor/es: Femmine, L. D. Titulo: Asi es como malgastas energia (y dinero) en la cocina Fecha: (El Pais) Editor: (2013) Paginas: (2) Obra: Columna")
             expect(@a3.to_s).to eq("Autor/es: Castejon, P. S. Titulo: El Prado alcanza su cumbre digital Fecha: (El Pais) Editor: (2010) Paginas: (1) Obra: Opinion")
-            expect(@a4.to_s).to eq("Autor/es: Castejon, P. S. Titulo: La justicia deportiva mantiene la suspensión a Platini Fecha: (El Pais) Editor: (2010) Paginas: (2) Obra: Articulo")
+            expect(@a4.to_s).to eq("Autor/es: Castejon, P. S. Titulo: La justicia deportiva mantiene la suspension a Platini Fecha: (El Pais) Editor: (2010) Paginas: (2) Obra: Articulo")
         end
         
     end
