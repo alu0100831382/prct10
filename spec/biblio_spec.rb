@@ -65,6 +65,19 @@ describe Biblio do
             @list_b.insert_list(@a4)
             @list_c.insert_list(@a1)
             @list_c.insert_list(@a3)
-         end
+        end
+         
+        it "Autores distintos, ordenados por autores" do
+            expect(@list_a.sort).to eq([@a1,@a2])
+        end
+        
+        it "Autores iguales, ordenados por fechas" do
+            expect(@list_c.sort).to eq([@a1,@a3])
+        end
+         
+        it "Autores iguales y fechas iguales, ordenados por título" do
+            expect(@list_b.sort).to eq([@a4,@a3])
+        end
         
     end
+end
