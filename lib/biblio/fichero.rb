@@ -24,7 +24,7 @@ class Bibliography
     end
 end
 
-class Libro < Bibliography
+class Libro < Bibliography      #Clase para analizar los libros
     
     attr_accessor :edition,:volume,:place
      
@@ -37,12 +37,12 @@ class Libro < Bibliography
         @place = place
     end
     
-    def to_s()
+    def to_s()      #Formato dado para el APA en los libros
         @imprimir = "Autor/es: " + "#{@author}" + " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" + " Edicion: " + "#{@edition}" + " Volumen: " + "#{@volume}" + " Lugar de publicacion: " + "#{@place}" 
     end
 end
 
-class Articulo < Bibliography
+class Articulo < Bibliography       #Clase para analizar los articulos
 
     attr_accessor :editor,:pages,:type
     
@@ -55,7 +55,7 @@ class Articulo < Bibliography
         @type = type 
     end
     
-    def to_s()
+    def to_s()      #Formato dado para el APA en los articulos
         @imprimir = "Autor/es: " + "#{@author}" +  " Titulo: " + "#{@title}" + " Fecha: " + "#{@date}" +  " Editor: " + "#{@editor}" +  " Paginas: " + "#{@pages}" + " Obra: " + "#{@type}"
     end
     

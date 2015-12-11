@@ -36,7 +36,7 @@ describe Biblio do
             expect(@list_c.sort).to eq([@l3,@l2])
         end
         
-        it "Autores iguales y fechas iguales, ordenados por títulos" do
+        it "Autores iguales y fechas iguales, ordenados por titulos" do
             expect(@list_b.sort).to eq([@l3,@l4])
         end
         
@@ -75,7 +75,7 @@ describe Biblio do
             expect(@list_c.sort).to eq([@a3,@a1])
         end
          
-        it "Autores iguales y fechas iguales, ordenados por título" do
+        it "Autores iguales y fechas iguales, ordenados por titulos" do
             expect(@list_b.sort).to eq([@a3,@a4])
         end
         
